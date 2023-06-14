@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navcontainer">
+        <header class="navfont text-gray-600 body-font">
+            <div class="container mx-auto flex flex-wrap  flex-col md:flex-row items-center">
+                <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 no-underline">
+                    <img class="logo" src="../static/pics/logo.png" alt="logo">
+                    <span class="text-xl text spani">Travel Tours</span>
+                </a>
+                <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                    <a href="Home" class="mr-5 hover:text-gray-900 text">Home</a>
+                    <a href="Checkin" class="mr-5 hover:text-gray-900 text">Check-In</a>
+                    <a href="#" class="mr-5 hover:text-gray-900 text">Hotels</a>
+                    <a href="Packages" class="mr-5 hover:text-gray-900 text">Packages</a>
+                    <div class="dropdown">
+                        <a href="Register" class="mr-5 hover:text-gray-900 text">Register</a>
+                        <div class="dropdown-content">
+                            <a href="Signup" class="dropdowntext">Signup</a>
+                            <a href="Login" class="dropdowntext">Login</a>
+                        </div>
+
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+    </div>
+    <!-- <br> -->
+
+    <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="booking-form">
+                        <form action="" method="POST">
+                            <div class="row no-margin">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <span class="form-label">From</span>
+                                        <input class="form-control" type="text" placeholder="Enter City" name="source" id="source">
+                                    </div>
+
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="row no-margin">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <span class="form-label">To</span>
+                                                <input class="form-control" type="text" placeholder="Enter City" name="destination" id="destination" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <span class="form-label">Depart Date</span>
+                                                <input class="form-control" type="date" id="departdate" name="departdate">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <span class="form-label">Travellers</span>
+                                                <select class="form-control" name="travellers" id="travellers">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+                                                <span class="select-arrow"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <span class="form-label">Currency</span>
+                                                <select class="form-control" id="currency" name="currency">
+													<option>INR</option>
+													<option>CAD</option>
+													<option>USD</option>
+												</select>
+                                                <span class="select-arrow"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-btn">
+                                        <input type="submit" value="Get Packages" class="submit-btn" onclick="return validation()">
+                                        <!-- <button class="submit-btn" onclick="return validation()">Search Flight</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <div class="flex w-full mb-20 flex-wrap">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Explore, discover, and save with Travel Tours</h1>
+                <h2 class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Enjoy beaches, nightlife, shopping at some of the best destinations with Travel Tours. Pack a bag and crank up your favourite playlist-it's time to hit the roads and sky.</h2>
+            </div>
+            <div class="flex flex-wrap md:-m-2 -m-1">
+                <div class="flex flex-wrap w-1/2">
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="../static/pics/travel1.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="../static/pics/travel2.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-full">
+                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="../static/pics/travel3.jpg">
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-1/2">
+                    <div class="md:p-2 p-1 w-full">
+                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="../static/pics/travel4.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="../static/pics/travel5.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="../static/pics/travel6.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-gray-600 body-font">
+        <div class="container px-3 py-6 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                <a class="link flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <img class="logo" src="../static/pics/logo.png" alt="logo">
+                    <span class="ml-3 text-xl">TravelTours</span>
+                </a>
+                <p class="mt-2 text-sm text-gray-500">Be classy and fly with Travel Tours</p>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">About Us</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Corp Overview</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Fleet</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">CharterRequest</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Carrers</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Contact Us</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Airports</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Offices</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Head Office</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">RPF</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Travel Info</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Tour Screen</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Schedules</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Tracking</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Investors</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Financial</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Corporates</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Notices</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Shareholders</a>
+                        </li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="footerback">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-white text-sm text-center sm:text-left">© Travel Tours —
+                    <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-white ml-1 no-underline" target="_blank">@traveltours</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+              <a class="text-gray-500">
+                <svg fill="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="white" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="white" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewbox="0 0 24 24">
+                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+              </a>
+            </span>
+            </div>
+        </div>
+    </footer>
+    <script src="../static/script.js"></script>
+</body>
+
+</html>

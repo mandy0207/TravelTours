@@ -1,0 +1,395 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .logo {
+        width: 50px;
+        margin-top: 8px;
+    }
+    
+    .navcontainer {
+        width: 100%;
+        height: 70px;
+        background-color: #e43f3f;
+    }
+    
+    .navfont,
+    .loginfont {
+        font-family: 'Roboto Slab', serif;
+    }
+    
+    .spani {
+        /* position: absolute; */
+        margin-top: 12px;
+    }
+    
+    .text {
+        color: white;
+    }
+    
+    .formcontainer {
+        width: 80%;
+        height: 300px;
+        /* border: 2px solid red; */
+        margin: auto;
+        margin-top: 20px;
+        /* background: url("../pic.jpg"); */
+    }
+    
+    .field {
+        width: 80%;
+        padding: 5px 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+        align-items: center;
+    }
+    
+    nav a {
+        text-decoration: none;
+        font-size: medium;
+        margin: 10px 10px;
+    }
+    
+    .btn {
+        background: #e43f3f;
+        color: white;
+    }
+    
+    .searchbtn {
+        margin-left: 450px;
+        width: 20%;
+    }
+    
+    #client-section {
+        /* border: 2px solid; */
+        height: 300px;
+        width: 80%;
+        margin: auto;
+        animation: animate 30s ease-in-out 2s infinite alternate-reverse forwards;
+        background: url("../static/pics/ppp4.jpeg")no-repeat center center/cover;
+    }
+    
+    @keyframes animate {
+        0% {
+            background: url("../static/pics/ppp2.jpeg")no-repeat center center/cover;
+        }
+        20% {
+            background: url("../static/pics/ppp1.jpeg")no-repeat center center/cover;
+        }
+        40% {
+            background: url("../static/pics/ppp5.jpeg")no-repeat center center/cover;
+        }
+        60% {
+            background: url("../static/pics/ppp.jpeg")no-repeat center center/cover;
+        }
+        80% {
+            background: url("../static/pics/ppp3.jpeg")no-repeat center center/cover;
+        }
+        100% {
+            background-image: url("../static/pics/ppp1.jpeg")no-repeat center center/cover;
+        }
+    }
+    /* Service container */
+    
+    #services {
+        margin: 34px;
+        display: flex;
+    }
+    
+    #services .box {
+        /* border: 2px solid brown; */
+        padding: 34px;
+        margin: -24px 55px;
+        /* border-radius: 28px; */
+        background: #f2f2f2;
+        margin-bottom: 20px;
+    }
+    
+    #services .box img {
+        height: 160px;
+        margin: auto;
+        display: block;
+    }
+    
+    #services .box p {
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        text-align: justify;
+    }
+    
+    .flip-card {
+        background-color: transparent;
+        perspective: 1000px;
+    }
+    
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .flip-card-front,
+    .flip-card-back {
+        position: relative;
+        /* width: 100%;
+    height: 100%; */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    .flip-card-front {
+        background-color: white;
+        color: black;
+    }
+    
+    .flip-card-back {
+        background-color: #e43f3f;
+        color: white;
+        transform: rotateY(180deg);
+    }
+    
+    .appbtn {
+        background-color: #e43f3f;
+    }
+    
+    .apptxt {
+        color: white;
+    }
+    
+    .link {
+        text-decoration: none;
+    }
+    
+    body::before {
+        content: "";
+        position: absolute;
+        background: url('../static/pics/black.jpeg') no-repeat center center/cover;
+        height: 700px;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+    }
+    
+    .loginbtn,
+    .footerback,
+    .checkinbtn {
+        background-color: #e43f3f;
+    }
+    /* Css for Drop down */
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #e43f3f;
+        min-width: 130px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdowntext {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .dropdowntext:hover {
+        color: white;
+    }
+    /* Css for Flight Search */
+    
+    .section {
+        position: relative;
+        height: 100vh;
+    }
+    
+    .section .section-center {
+        position: absolute;
+        top: 25%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    /* #booking {
+        font-family: 'Source Sans Pro', sans-serif;
+        background-image: url('../img/background.jpg');
+        background-size: cover;
+        background-position: center;
+    } */
+    
+    .booking-form {
+        background: #fff;
+        -webkit-box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(60, 64, 101, 0.1);
+    }
+    
+    .booking-form>form .row.no-margin {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    
+    .booking-form>form .row.no-margin>[class*="col-"] {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    /* .booking-form .form-header {
+        padding: 15px 10px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+    } */
+    /* .booking-form .form-header h2 {
+        font-family: 'Alegreya', serif;
+        margin: 0;
+        display: inline-block;
+        font-size: 52px;
+        color: #9a8067;
+    } */
+    
+    .booking-form .form-group {
+        position: relative;
+        height: 110px;
+        padding: 15px 10px;
+        margin-bottom: 0px;
+    }
+    
+    .booking-form .form-control {
+        font-family: 'Alegreya', serif;
+        background-color: transparent;
+        border-radius: 0px;
+        border: 1px groove #77cdff;
+        border-radius: 5px;
+        height: 50px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding: 0;
+        font-size: 25px;
+        color: #3c404a;
+        font-weight: 700;
+    }
+    
+    .booking-form select.form-control {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
+    .booking-form select.form-control+.select-arrow {
+        position: absolute;
+        right: 0px;
+        bottom: 20px;
+        width: 32px;
+        line-height: 32px;
+        height: 32px;
+        text-align: center;
+        pointer-events: none;
+        color: #818390;
+        font-size: 12px;
+    }
+    
+    .booking-form select.form-control+.select-arrow:after {
+        content: '\279C';
+        display: block;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    
+    .booking-form .form-label {
+        color: #818390;
+        display: block;
+        font-weight: 400;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    
+    .booking-form .form-btn {
+        padding: 15px 10px;
+        height: 110px;
+    }
+    
+    .booking-form .submit-btn {
+        margin-top: 40px;
+        background: #e43f3f;
+        color: whitesmoke;
+        border: none;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 14px;
+        display: block;
+        height: 40px;
+        width: 100%;
+        border-radius: 5px;
+        font-family: 'Roboto Slab', serif;
+    }
+    
+    .form-group>input::placeholder {
+        padding-left: 10px;
+    }
+    
+    .bookbtn {
+        height: 40px;
+        width: 70px;
+    }
+    
+    .bookbtn a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .paycontainer {
+        width: 100%;
+        height: 600px;
+        /* border: 2px solid black; */
+        display: flex;
+    }
+    
+    .paybox1,
+    .paybox2,
+    .paybox3 {
+        border: 2px solid blue;
+        height: 530px;
+        width: 30%;
+        margin: auto;
+    }
+    
+    .padding {
+        display: none;
+        width: 200%;
+    }
+    
+    .form-control:focus {
+        box-shadow: 10px 0px 0px 0px #ffffff;
+        border-color: #e43f3f;
+    }
+    
+    .CCBTN {
+        width: 100%;
+        background-color: #e43f3f;
+    }
+    /* 404 page CSS */
